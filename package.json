@@ -7,7 +7,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "astro": "^5.14.1"
@@ -24,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/bdrn/astro-portfolio/issues"
   },
-  "homepage": "https://github.com/bdrn/astro-portfolio#readme"
+  "homepage": "https://github.com/bdrn/astro-portfolio#readme",
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1"
+  }
 }
