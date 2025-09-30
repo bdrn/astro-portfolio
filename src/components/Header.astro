@@ -1,3 +1,7 @@
+---
+import ButtonLink from "../components/ButtonLink.astro";
+---
+
 <div class="container">
   <header id="header">
     <div class="content">
@@ -15,33 +19,14 @@
         provides ways to get in touch.
       </p>
       <div class="button-container">
-        <a class="button-link secondary" href="projects">View projects</a>
-        <a class="button-link primary" href="/resume.pdf" download>Download resume</a>
+        <ButtonLink href="/projects" text="View projects" variant="secondary" />
+        <ButtonLink href="/resume.pdf" text="Download resume" variant="primary" isDownload />
       </div>
     </div>
     <img src="/images/me.png" alt="picture of me" />
   </header>
 </div>
 <style>
-  .button-link {
-    padding: 14px 32px;
-    width: 230px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-  }
-
-  .primary {
-    background: var(--primary);
-    color: white;
-  }
-
-  .secondary {
-    background: var(--secondary);
-    color: var(--primary);
-    border: 1px solid var(--primary);
-  }
-
   .container {
     max-width: 1100px;
     margin: 0 auto;
