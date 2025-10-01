@@ -1,0 +1,81 @@
+---
+import Section from "./Section.astro";
+import SectionHeader from "./SectionHeader.astro";
+const heading = "My Projects";
+const cta = { text: "View All", href: "/projects" };
+
+const projects = [
+  {
+    title: "Dashboard App",
+    slug: "project-1",
+    description: "A dashboard app built with React, Supabase and Tailwind CSS",
+    image: "/images/projects/project-1.png",
+    githubURL: "https://github.com/bdrn",
+    liveURL: "https://bdrn.com",
+  },
+  {
+    title: "SaaS Landing Page",
+    slug: "project-2",
+    description: "A SaaS landing page built with Next.js, Tailwind CSS and TypeScript",
+    image: "/images/projects/project-2.png",
+    githubURL: "https://github.com/bdrn",
+    liveURL: "https://bdrn.com",
+  },
+  {
+    title: "E-commerce Store",
+    slug: "project-3",
+    description: "An e-commerce store built with React, Supabase and Tailwind CSS",
+    image: "/images/projects/project-3.png",
+    githubURL: "https://github.com/bdrn",
+    liveURL: "https://bdrn.com",
+  },
+];
+---
+
+<Section dark={true}>
+  <SectionHeader cta={cta} heading={heading} />
+  <div class="projects-container">
+    {
+      projects.map((project) => (
+        <div class="project-card">
+          <img src={project.image} alt={project.title} />
+          <h3>
+            <a href={project.liveURL}>{project.title}</a>
+          </h3>
+        </div>
+      ))
+    }
+  </div>
+</Section>
+
+<style>
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+
+    .project-card {
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h3 {
+      margin-top: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    @media (max-width: 700px) {
+      & {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+</style>
