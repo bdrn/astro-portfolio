@@ -1,35 +1,9 @@
 ---
 import Section from "./Section.astro";
+import projects from "../data/projects.json";
 import SectionHeader from "./SectionHeader.astro";
 const heading = "My Projects";
 const cta = { text: "View All", href: "/projects" };
-
-const projects = [
-  {
-    title: "Dashboard App",
-    slug: "project-1",
-    description: "A dashboard app built with React, Supabase and Tailwind CSS",
-    image: "/images/projects/project-1.png",
-    githubURL: "https://github.com/bdrn",
-    liveURL: "https://bdrn.com",
-  },
-  {
-    title: "SaaS Landing Page",
-    slug: "project-2",
-    description: "A SaaS landing page built with Next.js, Tailwind CSS and TypeScript",
-    image: "/images/projects/project-2.png",
-    githubURL: "https://github.com/bdrn",
-    liveURL: "https://bdrn.com",
-  },
-  {
-    title: "E-commerce Store",
-    slug: "project-3",
-    description: "An e-commerce store built with React, Supabase and Tailwind CSS",
-    image: "/images/projects/project-3.png",
-    githubURL: "https://github.com/bdrn",
-    liveURL: "https://bdrn.com",
-  },
-];
 ---
 
 <Section dark={true}>
