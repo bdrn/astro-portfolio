@@ -1,0 +1,15 @@
+---
+import Section from "../components/Section.astro";
+import Layout from "../layouts/Layout.astro";
+
+const title = "Contact";
+const email = "mohamad@badran.io";
+---
+
+<Layout title="Contact">
+  <Section>
+    <h1>{title}</h1>
+    <p>you can contact me at <a href={`mailto:${email}`}>email</a></p>
+    <img src="/images/me.png" alt="picture of me" />
+  </Section>
+</Layout>
