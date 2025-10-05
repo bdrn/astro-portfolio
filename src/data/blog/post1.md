@@ -6,8 +6,6 @@ image: "/images/posts/post-1.jpg"
 tags: ["astro", "blog", "testing"]
 ---
 
-# Hello World 👋
-
 First **Astro blog post!**  
 This is a test to make sure Markdown rendering and routing are working correctly.
 
@@ -16,5 +14,5 @@ This is a test to make sure Markdown rendering and routing are working correctly
 Code block example:
 
 ```js
-console.log("Astro is fast 🚀");
+console.log("Astro is fast");
 ```
