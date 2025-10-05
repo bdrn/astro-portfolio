@@ -12,7 +12,9 @@
     "format:check": "prettier --check ."
   },
   "dependencies": {
-    "astro": "^5.14.1"
+    "@astrojs/check": "^0.9.4",
+    "astro": "^5.14.1",
+    "typescript": "^5.9.3"
   },
   "description": "```sh npm create astro@latest -- --template basics ```",
   "main": "index.js",

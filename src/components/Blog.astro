@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import SectionHeader from "./SectionHeader.astro";
+import Section from "./Section.astro";
+import HorizontalSeparator from "./HorizontalSeparator.astro";
+import BlogCard from "./BlogCard.astro";
+import ButtonLink from "./ButtonLink.astro";
+
+const posts = await getCollection("blog");
+const heading = "Blog";
+const cta = { text: "View Blog", href: "/blog" };
+---
+
+<Section>
+  <SectionHeader heading={heading} cta={cta} />
+  {posts.map((post) => <BlogCard post={post} />)}
+  <HorizontalSeparator />
+</Section>
+
+<style>
+  .description {
+    font-size: 16px;
+    color: var(--dark);
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+</style>
