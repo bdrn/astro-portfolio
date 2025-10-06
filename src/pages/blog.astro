@@ -9,19 +9,14 @@ const posts = await getCollection("blog");
 const heading = "Blog";
 ---
 
-<Layout title="Blog">
-  <Section>
-    <h1>{heading}</h1>
-    {posts.map((post) => <BlogCard post={post} />)}
-    <HorizontalSeparator />
-  </Section>
-</Layout>
-
+<Layout>
+    <Section>
+      <h1>{heading}</h1>
+      {posts.map(post => (
+        <BlogCard post={post}/>
+        <HorizontalSeparator/>
+      ))}
+    </Section>
+  </Layout>
+  
 <style>
-  .description {
-    font-size: 16px;
-    color: var(--dark);
-    margin-top: 0px;
-    margin-bottom: 40px;
-  }
-</style>

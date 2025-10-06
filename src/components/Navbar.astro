@@ -1,5 +1,16 @@
 ---
 import Container from "./Container.astro";
+
+// Get the current pathname to determine which nav item should be active
+const currentPath = Astro.url.pathname;
+
+// Helper function to check if a path is active
+const isActive = (path: string) => {
+  if (path === "/") {
+    return currentPath === "/";
+  }
+  return currentPath.startsWith(path);
+};
 ---
 
 <nav class="nav">
@@ -9,9 +20,9 @@ import Container from "./Container.astro";
         <a href="/"><img src="/images/ASTRA.svg" alt="logo" /></a>
       </div>
       <ul class="nav-items">
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/projects" class={isActive("/projects") ? "active" : ""}>Projects</a></li>
+        <li><a href="/blog" class={isActive("/blog") ? "active" : ""}>Blog</a></li>
+        <li><a href="/contact" class={isActive("/contact") ? "active" : ""}>Contact</a></li>
       </ul>
     </div>
   </Container>
@@ -41,6 +52,16 @@ import Container from "./Container.astro";
         text-decoration: none;
         display: flex;
         gap: 24px;
+        color: var(--dark);
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: var(--primary);
+      }
+
+      a.active {
+        color: var(--primary);
       }
     }
 
