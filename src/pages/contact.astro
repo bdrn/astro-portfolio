@@ -8,14 +8,21 @@ import Footer from "../components/Footer.astro";
   <div class="contact-page">
     <div class="contact-content">
       <div class="social-icons">
-        <a href="mailto:mohamad@badran.io" class="social-link">
-          <img src="/images/icons/email.svg" alt="email" />
+        <a href="mailto:mohamad@badran.io" class="social-link" aria-label="email">
+          <span class="icon" style="--icon: url('/images/icons/email.svg');"></span>
         </a>
-        <a href="https://github.com/bdrn" class="social-link">
-          <img src="/images/icons/github.svg" alt="github" />
+
+        <a href="https://github.com/bdrn" class="social-link" aria-label="github" target="_blank">
+          <span class="icon" style="--icon: url('/images/icons/github.svg');"></span>
         </a>
-        <a href="https://linkedin.com/in/mohbadran" class="social-link">
-          <img src="/images/icons/linkedin.svg" alt="linkedin" />
+
+        <a
+          href="https://linkedin.com/in/mohbadran"
+          class="social-link"
+          aria-label="linkedin"
+          target="_blank"
+        >
+          <span class="icon" style="--icon: url('/images/icons/linkedin.svg');"></span>
         </a>
       </div>
     </div>
@@ -59,13 +66,17 @@ import Footer from "../components/Footer.astro";
 
   .social-link:hover {
     transform: scale(1.1);
-    opacity: 0.8;
+    opacity: 1;
   }
 
-  .social-link img {
+  .icon {
     width: 80px;
     height: 80px;
-    filter: none;
+    display: inline-block;
+    background-color: var(--dark);
+    -webkit-mask: var(--icon) no-repeat center / contain;
+    mask: var(--icon) no-repeat center / contain;
+    transition: background-color 0.2s ease;
   }
 
   @media screen and (max-width: 700px) {
@@ -73,7 +84,7 @@ import Footer from "../components/Footer.astro";
       gap: 40px;
     }
 
-    .social-link img {
+    .icon {
       width: 60px;
       height: 60px;
     }
@@ -85,9 +96,13 @@ import Footer from "../components/Footer.astro";
       flex-direction: column;
     }
 
-    .social-link img {
+    .icon {
       width: 50px;
       height: 50px;
     }
+  }
+
+  .social-link:hover .icon {
+    background-color: var(--primary);
   }
 </style>

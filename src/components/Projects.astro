@@ -14,7 +14,9 @@ const cta = { text: "View All", href: "/projects" };
     {
       projects.map((project) => (
         <div class="project-card">
-          <img src={project.data.image} alt={project.data.title} />
+          <a href={project.data.liveURL} target="_blank">
+            <img src={project.data.image} alt={project.data.title} />
+          </a>
           <h3>
             <a href={project.data.liveURL}>{project.data.title}</a>
           </h3>
@@ -35,6 +37,16 @@ const cta = { text: "View All", href: "/projects" };
       transition: transform 0.3s ease-in-out;
       display: flex;
       flex-direction: column;
+    }
+
+    .project-card a img {
+      height: 300px;
+      width: 300px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .project-card a:hover img {
+      transform: scale(1.05);
     }
 
     h3 {

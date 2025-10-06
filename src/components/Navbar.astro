@@ -1,10 +1,8 @@
 ---
 import Container from "./Container.astro";
 
-// Get the current pathname to determine which nav item should be active
 const currentPath = Astro.url.pathname;
 
-// Helper function to check if a path is active
 const isActive = (path: string) => {
   if (path === "/") {
     return currentPath === "/";
@@ -17,7 +15,7 @@ const isActive = (path: string) => {
   <Container>
     <div class="nav-container">
       <div>
-        <a href="/"><img src="/images/ASTRA.svg" alt="logo" /></a>
+        <a href="/"><img src="/images/logo.svg" alt="logo" /></a>
       </div>
       <ul class="nav-items">
         <li><a href="/projects" class={isActive("/projects") ? "active" : ""}>Projects</a></li>

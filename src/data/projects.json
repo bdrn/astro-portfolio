@@ -2,25 +2,9 @@
   {
     "title": "Dashboard App",
     "slug": "project-1",
-    "description": "A dashboard app built with React, Supabase and Tailwind CSS",
+    "description": "A dashboard app built with React, Supabase and Tailwind CSS \n (currently in progress!)",
     "image": "/images/projects/project-1.png",
     "githubURL": "https://github.com/bdrn",
-    "liveURL": "https://bdrn.com"
-  },
-  {
-    "title": "SaaS Landing Page",
-    "slug": "project-2",
-    "description": "A SaaS landing page built with Next.js, Tailwind CSS and TypeScript",
-    "image": "/images/projects/project-2.png",
-    "githubURL": "https://github.com/bdrn",
-    "liveURL": "https://bdrn.com"
-  },
-  {
-    "title": "E-commerce Store",
-    "slug": "project-3",
-    "description": "An e-commerce store built with React, Supabase and Tailwind CSS",
-    "image": "/images/projects/project-3.png",
-    "githubURL": "https://github.com/bdrn",
-    "liveURL": "https://bdrn.com"
+    "liveURL": "https://github.com/bdrn"
   }
 ]

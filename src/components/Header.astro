@@ -20,14 +20,19 @@ import Section from "../components/Section.astro";
       </p>
       <div class="button-container">
         <ButtonLink href="/projects" text="View projects" variant="secondary" />
-        <ButtonLink href="/resume.pdf" text="Download resume" variant="primary" isDownload />
+        <!--<ButtonLink href="/resume.pdf" text="Download resume" variant="primary" isDownload /> -->
       </div>
     </div>
-    <!-- <img src="/images/me.png" alt="picture of me" />  -->
+    <img src="/images/me.png" alt="picture of me" />
   </header>
 </Section>
 
 <style>
+  img {
+    max-width: 350px;
+    height: 350px;
+  }
+
   #header {
     display: grid;
     grid-template-columns: 540px 1fr;
