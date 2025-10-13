@@ -2,9 +2,9 @@
   {
     "title": "Dashboard App",
     "slug": "project-1",
-    "description": "A dashboard app built with React, Supabase and Tailwind CSS \n (currently in progress!)",
+    "description": "Real-time sales tracking with React and Supabase. Role-based access for reps and admins with interactive charts and live updates.",
     "image": "/images/projects/project-1.png",
-    "githubURL": "https://github.com/bdrn",
-    "liveURL": "https://github.com/bdrn"
+    "githubURL": "https://github.com/bdrn/sales-dashboard-app",
+    "liveURL": "https://sales-dashboard-app-xi.vercel.app/signin"
   }
 ]
