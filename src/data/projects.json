@@ -6,5 +6,13 @@
     "image": "/images/projects/project-1.png",
     "githubURL": "https://github.com/bdrn/sales-dashboard-app",
     "liveURL": "https://sales-dashboard-app-xi.vercel.app/"
+  },
+  {
+    "title": "Stock Tracker App",
+    "slug": "project-2",
+    "description": "Real-time stock tracker with live prices, charts and watchlists. (currently under development)",
+    "image": "/images/projects/project-2.png",
+    "githubURL": "https://github.com/bdrn/stock-tracker-app",
+    "liveURL": "https://github.com/bdrn/"
   }
 ]
