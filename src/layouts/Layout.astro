@@ -58,5 +58,24 @@ import Footer from "../components/Footer.astro";
       --dark: #21243d;
       --light: #8695a4;
     }
+
+    img.flowchart-image {
+      max-width: 600px !important;
+      width: 600px !important;
+      height: auto !important;
+      margin: 20px auto !important;
+      display: block !important;
+      border-radius: 8px;
+    }
+
+    /* Fallback for any image with flowchart in the src */
+    img[src*="supabase1"] {
+      max-width: 1000px !important;
+      width: 1000px !important;
+      height: auto !important;
+      margin: 20px auto !important;
+      display: block !important;
+      border-radius: 8px;
+    }
   </style>
 </html>
