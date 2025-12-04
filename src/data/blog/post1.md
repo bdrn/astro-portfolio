@@ -1,6 +1,6 @@
 ---
 title: "First blog post"
-description: "Kicking off my site and blog, a place to showcase projects, reflect, and document the process."
+description: "A place to showcase projects, reflect, and document the process."
 date: "2025-10-06"
 image: "/images/posts/post-1.jpg"
 tags: ["intro", "blog", "projects"]
