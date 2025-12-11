@@ -27,21 +27,38 @@ const { href, text, variant = "primary", isDownload } = Astro.props;
 
 <style>
   .button-link {
-    padding: 14px 32px;
-    width: 230px;
+    padding: 12px 28px;
     text-align: center;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    display: inline-block;
+    border: 1px solid transparent;
   }
 
   .primary {
-    background: var(--primary);
-    color: white;
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+  }
+
+  .primary:hover {
+    background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    opacity: 1;
   }
 
   .secondary {
-    background: var(--secondary);
-    color: var(--primary);
-    border: 1px solid var(--primary);
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border);
+  }
+
+  .secondary:hover {
+    border-color: var(--text);
+    opacity: 1;
   }
 </style>

@@ -1,5 +1,5 @@
 ---
-title: "First blog post"
+title: "Kicking off the site with a first blog post"
 description: "A place to showcase projects, reflect, and document the process."
 date: "2025-10-06"
 image: "/images/posts/post-1.jpg"

@@ -15,7 +15,7 @@ const isActive = (path: string) => {
   <Container>
     <div class="nav-container">
       <div>
-        <a href="/"><img src="/images/logo.svg" alt="logo" /></a>
+        <a href="/"><img src="/images/logo111.svg" alt="logo" /></a>
       </div>
       <ul class="nav-items">
         <li><a href="/projects" class={isActive("/projects") ? "active" : ""}>Projects</a></li>
@@ -28,46 +28,90 @@ const isActive = (path: string) => {
 
 <style>
   .nav {
-    background-color: var(--secondary);
+    background-color: transparent;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    width: 100%;
+  }
 
-    img {
-      height: 20px;
-    }
+  .nav img {
+    height: 33px;
+    width: auto;
+    opacity: 0.9;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
 
+  .nav-container {
+    display: flex;
+    padding: 16px 0;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    min-height: 52px;
+  }
+
+  .nav-items {
+    list-style-type: none;
+    display: flex;
+    gap: 32px;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-items li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-container a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 400;
+    transition: color 0.2s ease;
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-container a:hover {
+    color: var(--text);
+    opacity: 1;
+  }
+
+  .nav-container a.active {
+    color: var(--text);
+  }
+
+  .nav-container a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--text);
+  }
+
+  @media screen and (max-width: 600px) {
     .nav-container {
-      display: flex;
-      padding: 24px 0;
-      justify-content: space-between;
-      align-items: center;
-
-      .nav-items {
-        list-style-type: none;
-        display: flex;
-        gap: 24px;
-      }
-
-      a {
-        text-decoration: none;
-        display: flex;
-        gap: 24px;
-        color: var(--dark);
-        transition: color 0.3s ease;
-      }
-
-      a:hover {
-        color: var(--primary);
-      }
-
-      a.active {
-        color: var(--primary);
-      }
+      flex-direction: column;
+      gap: 12px;
+      padding: 16px 0;
+      min-height: auto;
     }
 
-    @media screen and (max-width: 500px) {
-      & {
-        flex-direction: column;
-        gap: 16px;
-      }
+    .nav-items {
+      gap: 24px;
+      font-size: 13px;
     }
   }
 </style>

@@ -16,13 +16,19 @@ const { dark = false } = Astro.props;
 
 <style>
   section {
-    padding: 80px 0;
+    padding: 60px 0;
 
     &.dark {
-      background: var(--secondary);
+      background: var(--bg-secondary);
     }
 
     @media (max-width: 1000px) {
+      & {
+        padding: 48px 0;
+      }
+    }
+
+    @media (max-width: 600px) {
       & {
         padding: 40px 0;
       }

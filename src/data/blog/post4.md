@@ -1,6 +1,6 @@
 ---
 title: "What I Learned Building a DevOps-Friendly REST API"
-description: "Lessons learned from implementing CI/CD and security best practices"
+description: "Lessons learned from implementing CI/CD and security best practices."
 date: "2025-12-09"
 image: "/images/posts/post-4.png"
 tags: ["api", "node", "ci/cd", "docker"]

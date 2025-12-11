@@ -2,7 +2,7 @@
   {
     "title": "Dashboard App",
     "slug": "project-1",
-    "description": "Real-time sales tracking with React and Supabase. (might not work since Supabase pauses the project due to inactivity)",
+    "description": "Real-time sales tracking with React and Supabase. \n(might not work since Supabase pauses the project due to inactivity)",
     "image": "/images/projects/project-1.png",
     "githubURL": "https://github.com/bdrn/sales-dashboard-app",
     "liveURL": "https://sales-dashboard-app-xi.vercel.app/"

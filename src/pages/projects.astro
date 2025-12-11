@@ -3,7 +3,6 @@ import { getCollection } from "astro:content";
 import ButtonLink from "../components/ButtonLink.astro";
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
-import HorizontalSeparator from "../components/HorizontalSeparator.astro";
 
 const heading = "My Projects";
 // Show projects with the newest entries first.
@@ -26,55 +25,79 @@ const projects = (await getCollection("project")).slice().reverse();
             </div>
           </div>
         </div>
-        <HorizontalSeparator />
       ))
     }
   </Section>
 </Layout>
 
 <style>
+  h1 {
+    margin-bottom: 32px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
   .card {
-    overflow: hidden;
     display: flex;
     gap: 40px;
+    padding: 24px 0;
+    border-bottom: 1px solid var(--border);
+  }
 
-    h3 {
-      font-size: 30px;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
+  .card:last-child {
+    border-bottom: none;
+  }
 
-    .description {
-      margin-bottom: 40px;
+  h3 {
+    font-size: clamp(22px, 2.5vw, 26px);
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: var(--text);
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    white-space: pre-line;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .button-container {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 800px) {
+    .card {
+      flex-direction: column;
+      gap: 24px;
     }
 
     img {
+      width: 100%;
+      max-width: 300px;
       height: 200px;
-      width: 200px;
-      object-fit: cover;
+      align-self: flex-start;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .card {
+      padding: 32px 0;
     }
 
     .button-container {
-      display: flex;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 800px) {
-      & {
-        flex-direction: column;
-      }
-
-      img {
-        align-self: center;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .button-container {
-        flex-direction: column;
-        gap: 10px;
-      }
+      flex-direction: column;
     }
   }
 </style>

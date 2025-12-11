@@ -14,7 +14,6 @@ import Section from "./Section.astro";
       >
     </div>
     <p class="rights-text">© {new Date().getFullYear()} Mohamad Badran</p>
-    <p class="credits-text">Images by: Flaticon</p>
   </footer>
 </Section>
 
@@ -23,28 +22,55 @@ import Section from "./Section.astro";
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 32px 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .icons-container {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 16px;
+    align-items: center;
+  }
+
+  .icons-container a {
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+  }
+
+  .icons-container a:hover {
+    opacity: 1;
+  }
+
+  .icons-container img {
+    width: 20px;
+    height: 20px;
+    filter: grayscale(100%);
+    transition: filter 0.2s ease;
+  }
+
+  .icons-container a:hover img {
+    filter: grayscale(0%);
+  }
+
+  .rights-text {
+    color: var(--text-tertiary);
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .credits-text {
+    color: var(--text-tertiary);
+    font-size: 12px;
+  }
+
+  @media screen and (max-width: 600px) {
+    footer {
+      padding: 40px 0;
+    }
 
     .icons-container {
-      display: flex;
       gap: 20px;
-      margin-bottom: 20px;
-      align-items: center;
-    }
-
-    .credits-text {
-      color: var(--light);
-      margin-top: 8px;
-      font-size: 14px;
-    }
-
-    @media screen and (max-width: 500px) {
-      .icons-container {
-        flex-direction: column;
-        gap: 4px;
-        img {
-          height: 20px;
-        }
-      }
     }
   }
 </style>

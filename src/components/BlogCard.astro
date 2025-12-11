@@ -22,55 +22,70 @@ const { post } = Astro.props;
 
 <style>
   .blog-card {
-    margin-bottom: 60px;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border);
+  }
 
-    h3 {
-      margin-bottom: 14px;
-      font-size: 30px;
+  .blog-card:last-child {
+    border-bottom: none;
+  }
+
+  h3 {
+    margin-bottom: 12px;
+    font-size: clamp(20px, 2.5vw, 24px);
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--text);
+  }
+
+  .metadata {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+    font-size: 13px;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .vertical-separator {
+    width: 1px;
+    height: 12px;
+    background-color: var(--border);
+  }
+
+  .date {
+    font-size: 13px;
+  }
+
+  .tags {
+    font-size: 13px;
+    color: var(--text-tertiary);
+  }
+
+  .description {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .blog-card {
+      margin-bottom: 32px;
+      padding-bottom: 32px;
     }
 
     .metadata {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      margin-bottom: 20px;
-
-      .vertical-separator {
-        width: 1px;
-        height: 30px;
-        background-color: var(--dark);
-      }
-
-      .date {
-        font-size: 20px;
-      }
-
-      .tags {
-        font-size: 20px;
-        color: var(--light);
-      }
-
-      @media screen and (max-width: 600px) {
-        flex-direction: column;
-        gap: 2px;
-        align-items: start;
-        margin-bottom: 16px;
-
-        * {
-          margin: 0;
-        }
-
-        .vertical-separator {
-          height: 0;
-          display: none;
-        }
-      }
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
     }
-  }
-  .description {
-    font-size: 16px;
-    color: var(--dark);
-    margin-top: 0px;
-    margin-bottom: 40px;
+
+    .vertical-separator {
+      display: none;
+    }
   }
 </style>

@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import Section from "../components/Section.astro";
-import HorizontalSeparator from "../components/HorizontalSeparator.astro";
 import BlogCard from "../components/BlogCard.astro";
 import Layout from "../layouts/Layout.astro";
 
@@ -12,13 +11,18 @@ const heading = "Blog";
 ---
 
 <Layout>
-    <Section>
-      <h1>{heading}</h1>
-      {posts.map(post => (
-        <BlogCard post={post}/>
-        <HorizontalSeparator/>
-      ))}
-    </Section>
-  </Layout>
-  
+  <Section>
+    <h1>{heading}</h1>
+    {posts.map(post => (
+      <BlogCard post={post} />
+    ))}
+  </Section>
+</Layout>
+
 <style>
+  h1 {
+    margin-bottom: 32px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+</style>
