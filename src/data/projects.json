@@ -21,6 +21,6 @@
     "description": "Production API utilizing CI/CD pipeline, Docker, and Kubernetes. (currently in progress!)",
     "image": "/images/projects/project-3.png",
     "githubURL": "https://github.com/bdrn/production-api",
-    "liveURL": "https://github.com/bdrn/"
+    "liveURL": "https://github.com/bdrn/production-api"
   }
 ]
