@@ -1,7 +1,8 @@
 ---
 import Section from "./Section.astro";
 import { getCollection } from "astro:content";
-const projects = await getCollection("project");
+// Only show the latest three projects on the homepage (newest at the top).
+const projects = (await getCollection("project")).slice(-3).reverse();
 
 import SectionHeader from "./SectionHeader.astro";
 const heading = "My Projects";

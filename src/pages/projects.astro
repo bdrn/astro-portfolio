@@ -6,7 +6,8 @@ import Section from "../components/Section.astro";
 import HorizontalSeparator from "../components/HorizontalSeparator.astro";
 
 const heading = "My Projects";
-const projects = await getCollection("project");
+// Show projects with the newest entries first.
+const projects = (await getCollection("project")).slice().reverse();
 ---
 
 <Layout title="Projects">

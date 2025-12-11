@@ -2,13 +2,13 @@
   {
     "title": "Dashboard App",
     "slug": "project-1",
-    "description": "Real-time sales tracking with React and Supabase. Role-based access for reps and admins with interactive charts and live updates. (might not work since Supabase pauses the project due to inactivity)",
+    "description": "Real-time sales tracking with React and Supabase. (might not work since Supabase pauses the project due to inactivity)",
     "image": "/images/projects/project-1.png",
     "githubURL": "https://github.com/bdrn/sales-dashboard-app",
     "liveURL": "https://sales-dashboard-app-xi.vercel.app/"
   },
   {
-    "title": "Stock Tracker App",
+    "title": "Stock Tracker",
     "slug": "project-2",
     "description": "Real-time stock tracker with live prices, charts and watchlists.",
     "image": "/images/projects/project-2.png",
@@ -22,5 +22,13 @@
     "image": "/images/projects/project-3.png",
     "githubURL": "https://github.com/bdrn/production-api",
     "liveURL": "https://github.com/bdrn/production-api"
+  },
+  {
+    "title": "Arduino LLM",
+    "slug": "project-4",
+    "description": "Arduino LLM project which turns study notes into flashcards and quizzes. (currently in progress!)",
+    "image": "/images/projects/project-4.png",
+    "githubURL": "https://github.com/bdrn/arduino-llm",
+    "liveURL": "https://github.com/bdrn/arduino-llm"
   }
 ]
