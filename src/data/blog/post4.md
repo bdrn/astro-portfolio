@@ -6,9 +6,9 @@ image: "/images/posts/post-4.png"
 tags: ["api", "node", "ci/cd", "docker"]
 ---
 
-# Post (4) - Why This Project?
+## Post (4) - Why This Project?
 
-A while ago I took a course on containerization and dockerization to understand more of what my brother (a DevOps engineer) works with. The best way to learn was to build, so I created a production-ready API that applied security, testing, and continuous integration best practices.
+A while ago I took a course on containerization and dockerization to understand more of the DevOps process. The best way to learn was to build, so I created a production-ready API that applied security, testing, and continuous integration best practices.
 
 In earlier projects my APIs worked locally but lacked production concerns:
 
