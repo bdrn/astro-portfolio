@@ -1,60 +1,119 @@
-# Astro Starter Kit: Basics
+# Personal Portfolio
 
-```sh
-npm create astro@latest -- --template basics
+A clean, minimalist personal portfolio website built with [Astro](https://astro.build). Features a projects showcase, blog section, and contact page with a modern, responsive design.
+
+## 📁 Project Structure
+
 ```
-
-<!-- ASTRO:REMOVE:START -->
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-<!-- ASTRO:REMOVE:END -->
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-<!-- ASTRO:REMOVE:START -->
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-<!-- ASTRO:REMOVE:END -->
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+│   ├── images/          # Project images and assets
+│   └── favicon.png
+├── src/
+│   ├── components/      # Reusable Astro components
+│   │   ├── Header.astro
+│   │   ├── Navbar.astro
+│   │   ├── Projects.astro
+│   │   ├── BlogSection.astro
+│   │   └── ...
+│   ├── data/
+│   │   ├── projects.json  # Projects data
+│   │   └── blog/          # Blog markdown files
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       ├── index.astro
+│       ├── projects.astro
+│       ├── blog/
+│       └── contact.astro
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🛠️ Getting Started
 
-## 🧞 Commands
+### Prerequisites
 
-All commands are run from the root of the project, from a terminal:
+- Node.js 18+
+- npm or yarn
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Installation
 
-## 👀 Want to learn more?
+1. Clone the repository:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+git clone https://github.com/bdrn/astro-portfolio.git
+cd astro-portfolio
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:4321](http://localhost:4321) in your browser
+
+## 📜 Available Commands
+
+| Command                | Action                                       |
+| :--------------------- | :------------------------------------------- |
+| `npm run dev`          | Starts local dev server at `localhost:4321`  |
+| `npm run build`        | Build your production site to `./dist/`      |
+| `npm run preview`      | Preview your build locally, before deploying |
+| `npm run format`       | Format code with Prettier                    |
+| `npm run format:check` | Check code formatting                        |
+
+## 📝 Adding Content
+
+### Projects
+
+Edit `src/data/projects.json` to add or modify projects:
+
+```json
+{
+  "title": "Project Name",
+  "slug": "project-slug",
+  "description": "Project description",
+  "image": "/images/projects/project-image.png",
+  "githubURL": "https://github.com/username/repo",
+  "liveURL": "https://project-demo.com"
+}
+```
+
+### Blog Posts
+
+Add markdown files to `src/data/blog/` directory. The filename will be used as the slug for the blog post URL.
+
+## 🚢 Deployment
+
+This project can be deployed to various platforms:
+
+- **Vercel** - Zero-config deployment
+- **Netlify** - Automatic deployments
+- **GitHub Pages** - Static site hosting
+- **Cloudflare Pages** - Fast global CDN
+
+Build the project:
+
+```bash
+npm run build
+```
+
+The `dist/` folder contains the static site ready for deployment.
+
+## 📄 License
+
+ISC
+
+## 👤 Author
+
+**Mohamad Badran**
+
+- Website: [mohamadbadran.xyz](https://mohamadbadran.xyz)
+- GitHub: [@bdrn](https://github.com/bdrn)
