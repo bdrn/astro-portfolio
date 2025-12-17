@@ -24,11 +24,11 @@
     "liveURL": "https://github.com/bdrn/production-api"
   },
   {
-    "title": "Arduino LLM",
+    "title": "Raspberry Pi LLM",
     "slug": "project-4",
-    "description": "Arduino LLM project which turns study notes into flashcards and quizzes. (currently in progress!)",
+    "description": "Raspberry Pi LLM project which turns study notes into flashcards and quizzes. (currently in progress!)",
     "image": "/images/projects/project-4.png",
-    "githubURL": "https://github.com/bdrn/arduino-llm",
-    "liveURL": "https://github.com/bdrn/arduino-llm"
+    "githubURL": "https://github.com/bdrn/raspberry-pi-llm",
+    "liveURL": "https://github.com/bdrn/raspberry-pi-llm"
   }
 ]
